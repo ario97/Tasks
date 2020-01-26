@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <link href="assets/plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">  
+   <link rel="stylesheet" href="css/admin_menu_style.css">
+</head>
+<body>
+<div class="jumbotron text-center">
+  <div class="container">
+    
+    <h1 id="dobrodoslica">Dobrodošli administratoru!</h1>
+    <p style="color:#888;">Molim odaberite opciju:</p>
+    
+  </div>
+</div>
+<div class="container"> 
+  <!-- Example row of columns -->
+  
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h2>Opcije</h2>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 col-sm-3 col-xs-6"> <a href="admin_pogledaj_sve_zadane_zadatke.html" class="btn btn-sm animated-button victoria-one">Pogledaj sve zadatke</a> </div>
+    <div class="col-md-3 col-sm-3 col-xs-6"> <a href="admin_pregled_svih_korisnika.html" class="btn btn-sm animated-button victoria-two">Pregled svih korisnika</a> </div>
+    <div class="col-md-3 col-sm-3 col-xs-6"> <a href="#" id="myBtn" class="btn btn-sm animated-button victoria-three">Zadaj zadatak</a> </div>
+     <div class="col-md-3 col-sm-3 col-xs-6"> <a href="#" class="btn btn-sm animated-button victoria-four" onclick="Logout();">Logout</a> </div>
+  </div>
+  
+  
+</div>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+
+<div class="container">
+
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
+
+
+<!-- Select Basic -->
+   
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Korisnik</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="state" class="form-control selectpicker" id="ex-option">
+     <!-- <option id="txt_item" value=" " >Molim odaberite korisnika kojemu zelite zadati zadatak:</option> -->
+    </select>
+  </div>
+</div>
+</div>
+
+
+
+<!-- Text input-->
+
+
+    <div class="form-group">
+        <label class="col-md-4 control-label">Rok zadatka</label>
+        <div class="col-md-4 inputGroupContainer">
+        	 <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            <input id="textarea2" type="text" class="form-control" name="birthday" placeholder="DD/MM/YYYY" />
+        </div>
+    </div>
+    </div>
+
+
+
+<!-- Text area -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">Project Description</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+        	<textarea id="textarea1"class="form-control" name="comment" placeholder="Project Description"></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message"> <i class="glyphicon glyphicon-thumbs-up"></i> Uspjesno ste dodali zadatak :)</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" onclick="dodajZadatak();" class="btn btn-warning" >Pošalji <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+
+  </div>
+
+</div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBq2kiQCcnWXa9UZ0ysMzL9nfOsjRmGEHc",
+    authDomain: "upravljanje-zadacima-e856f.firebaseapp.com",
+    databaseURL: "https://upravljanje-zadacima-e856f.firebaseio.com",
+    projectId: "upravljanje-zadacima-e856f",
+    storageBucket: "upravljanje-zadacima-e856f.appspot.com",
+    messagingSenderId: "360505746178",
+    appId: "1:360505746178:web:915d911f2ba3de40c0581b",
+    measurementId: "G-571X8PDR5X"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+ 
+  <script src="assets/plugins/jquery/jquery-3.2.1.min.js"></script>       
+     <script src="assets/plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> 
+ <script src="js/admin_menu.js"></script>
+ <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"> </script>
+
+</body>
+</html>

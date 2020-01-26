@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <script src="assets/plugins/jquery/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="assets/plugins/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/login2_style.css">
+</head>
+<body class="content" class="bgImg">
+	<div class="container-fluid bgImg">
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-xs-12"></div>
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<form  id="loginForm">
+					<h1>Prijava</h1>
+  					<div class="form-group" id="user">
+    					<label for="inptUsername">Email</label>
+    					<input type="email" autocomplete="email" class="form-control" id="inptEmail" placeholder="Email" onkeyup="CheckMailFormat()">
+  					</div>
+  					<div class="form-group" id="pass">
+  						<label for="inptPassword">Lozinka</label>
+  						<input type="password" autocomplete="current-password" class="form-control" id="inptPassword" placeholder="Lozinka" onkeyup="CheckPassFormat()">
+  					</div>
+ 					<button type = "button" class="btn btn-success btn-block" id="login" onclick="Login()">Prijava</button>
+				</form>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-12"></div>
+		</div>
+	</div>
+
+
+
+
+
+	<script src="assets/plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+	
+	<script src="js/firebase_config.js"></script>
+	<script src="js/login2.js"></script> 
+</body>
+</html>

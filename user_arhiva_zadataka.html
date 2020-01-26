@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>	
+	    <meta charset="UTF-8">
+	<link rel="stylesheet" href="css/user_arhiva_zadataka_style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.bootstrap.min.css">
+
+</head>
+<body>
+	<header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid" id="navigacija">
+                <div class="row">
+                  <div class="col-sm-10">
+               
+                    <a class="navbar-brand float-right" href="user_menu.html"><i class=" glyphicon glyphicon-chevron-left"></i></a>
+                      <a class="navbar-brand float-right" href="user_menu.html">Glavni izbornik</a>
+                  </div>
+             
+                  <div class="col-sm-2">
+                    <a class="navbar-brand float-right" onclick="Logout()" href="#">Odjava</a>
+                    <a class="navbar-brand float-right" onclick="Logout()" href="#"> <i class=" glyphicon glyphicon-log-out"></i></a>
+                  </div>
+                </div>
+            </div>
+        </nav>
+  </header>
+	<main>
+		
+		<h1>Pregled završenih zadataka:</h1>
+
+		
+	<table class="table table-striped" id="ex-table">
+    <thead class="thead-inverse">
+        <tr>
+        <th>Opis</th>
+        <th>Rok</th>
+    
+      
+        </tr>
+    </thead>
+    <tbody>
+  
+   </tbody>
+</table>
+  
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBq2kiQCcnWXa9UZ0ysMzL9nfOsjRmGEHc",
+    authDomain: "upravljanje-zadacima-e856f.firebaseapp.com",
+    databaseURL: "https://upravljanje-zadacima-e856f.firebaseio.com",
+    projectId: "upravljanje-zadacima-e856f",
+    storageBucket: "upravljanje-zadacima-e856f.appspot.com",
+    messagingSenderId: "360505746178",
+    appId: "1:360505746178:web:915d911f2ba3de40c0581b",
+    measurementId: "G-571X8PDR5X"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+ 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.colVis.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.18/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.18/vfs_fonts.js"></script>
+
+
+
+
+  
+     <script src="assets/plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> 
+ <script src="js/user_arhiva_zadataka.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"> </script>
+	
+		
+	</main>
+
+	
+</body>
+</html>

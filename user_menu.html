@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <link href="assets/plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">  
+   <link rel="stylesheet" href="css/user_menu_style.css">
+</head>
+<body>
+<div class="jumbotron text-center">
+  <div class="container">
+    
+    <h1 id="dobrodoslica">Dobrodošli korisnice!</h1>
+    <p style="color:#888;">Molim odaberite opciju:</p>
+    
+  </div>
+</div>
+<div class="container"> 
+  <!-- Example row of columns -->
+  
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h2>Opcije</h2>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-12"> <a href="user_pregled_aktivnih_zadataka.html" class="btn btn-sm animated-button victoria-one">Pregled aktivnih zadataka</a> </div>
+    <div class="col-md-6 col-sm-6 col-xs-12"> <a href="user_arhiva_zadataka.html" class="btn btn-sm animated-button victoria-two">Arhiva zadataka</a> </div>
+    <div class="col-md-3 col-sm-3 col-xs-12"></div>
+    <div class="col-md-6 col-sm-6 col-xs-12"> <a href="#" class="btn btn-sm animated-button victoria-two" onclick="Logout();">Logout</a> </div>
+  </div>
+  
+  
+</div>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBq2kiQCcnWXa9UZ0ysMzL9nfOsjRmGEHc",
+    authDomain: "upravljanje-zadacima-e856f.firebaseapp.com",
+    databaseURL: "https://upravljanje-zadacima-e856f.firebaseio.com",
+    projectId: "upravljanje-zadacima-e856f",
+    storageBucket: "upravljanje-zadacima-e856f.appspot.com",
+    messagingSenderId: "360505746178",
+    appId: "1:360505746178:web:915d911f2ba3de40c0581b",
+    measurementId: "G-571X8PDR5X"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+ 
+  <script src="assets/plugins/jquery/jquery-3.2.1.min.js"></script>       
+     <script src="assets/plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> 
+ <script src="js/user_menu.js"></script>
+
+</body>
+</html>
